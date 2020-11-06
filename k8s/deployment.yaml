@@ -1,0 +1,24 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+    name: go-hpa
+spec: ## spec do deployment
+    selector:
+        matchLabels:
+            app: go-hpa
+            
+    template: ## configurações referente ao POD
+        metadata:
+            labels:
+                app: go-hpa
+        spec: ## spec do POD
+            containers:
+                - name: go-hpa
+                  image: fsmoraes/go-hpa:1.0
+                  ports:
+                    - containerPort: 8000
+                  resources: # Cada réplica deverá consumir no mínimo 50m e no máximo 100m.
+                    requests:
+                        cpu: "50m"
+                    limits:
+                        cpu: "100m"
