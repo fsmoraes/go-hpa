@@ -1,0 +1,10 @@
+steps:
+
+  - name: 'gcr.io/cloud-builders/go'
+    id: 'Tests'
+    args:
+      - 'test'
+      - '-v'
+    env:
+      - 'PROJECT_ROOT=app'
+    dir: 'go/src'
