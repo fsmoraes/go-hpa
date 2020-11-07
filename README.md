@@ -1,0 +1,1 @@
+[Imagem gerada da app Go no Docker Hub](https://hub.docker.com/layers/fsmoraes/go-hpa/1.0/images/sha256-df417af1a2b18c4ef6737ee38278f5ac2aaf3639c32a3c8e23596825398021cf?context=repo)
